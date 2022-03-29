@@ -3,8 +3,10 @@ import Colors from './colors';
 
 export const Container = styled.div`
   display: flex;
-  height: 100vh;
+  max-height: 100vh;
   flex-direction: column;
+  position: relative;
+  overflow-y: hidden;
 
   > span {
     width: 100%;
@@ -46,13 +48,34 @@ export const Ul = styled.ul`
   }
 `;
 
-export const SectionRowOne = styled.section`
+export const SectionGrid = styled.section`
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   padding: 100px 50px 80px;
   align-items: center;
+  row-gap: 60px;
+  overflow-y: scroll;
+
+  scrollbar-width: thin;
+  scrollbar-color: ${Colors.colorMaster} ${Colors.colorBackground};
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    padding: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: ${Colors.colorMaster};
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: ${Colors.colorBackground};
+    border-radius: 30px;
+    border: 1px solid ${Colors.colorWhite};
+    display: block !important;
+    max-height: 10px;
+  }
 `;
 
 export const ColumnPresentation = styled.div`
@@ -84,6 +107,19 @@ export const BoxButtons = styled.div`
 export const ColumnPerfilOne = styled.img`
   width: 100%;
   max-width: 420px;
+`;
+
+export const BoxSobre = styled.div`
+  > h2 {
+    color: ${Colors.colorMaster};
+    font-size: 2rem;
+    text-align: center;
+    margin: 12px 0;
+  }
+  > p {
+    color: ${Colors.colorWhite};
+    font-size: 1.5rem;
+  }
 `;
 
 export const ContentMain = styled.main``;

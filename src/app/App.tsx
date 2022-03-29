@@ -2,6 +2,7 @@ import React from 'react';
 import { GlobalStyles } from '../style/globalstyles';
 import {
   BoxButtons,
+  BoxSobre,
   ColumnLogo,
   ColumnNav,
   ColumnPerfilOne,
@@ -9,7 +10,7 @@ import {
   Container,
   ContentMain,
   Header,
-  SectionRowOne,
+  SectionGrid,
   Ul,
 } from '../style/style';
 
@@ -37,7 +38,7 @@ const App: React.FC = () => {
         </ColumnNav>
       </Header>
       <span />
-      <SectionRowOne>
+      <SectionGrid>
         <ColumnPresentation>
           <h1>
             Olá, eu sou o <br /> <strong>Rafael Santos</strong>.
@@ -53,7 +54,20 @@ const App: React.FC = () => {
           src={perfinOne}
           title="Foto Rafael Santos Full Stack Developer"
         />
-      </SectionRowOne>
+
+        <ColumnPerfilOne
+          src={perfinOne}
+          title="Foto Rafael Santos Full Stack Developer"
+        />
+        <BoxSobre>
+          <h2>Quem sou</h2>
+          <p>
+            Meu nome é Rafael Santos, sou Full Stack Developer, com foco em
+            trazer a melhor experiência para o usuário. Desenvolvo sites
+            modernos e de alta qualidade, com animações, responsividade e SEO.
+          </p>
+        </BoxSobre>
+      </SectionGrid>
       <ContentMain />
     </Container>
   );
