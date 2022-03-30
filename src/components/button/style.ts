@@ -24,7 +24,6 @@ export const BoxButton = styled.div<Active>`
     height: 20px;
     margin-left: 4px;
     border-radius: 50%;
-    background-color: ${Colors.colorBackground};
     transition: all 200ms;
 
     ${(props) =>
@@ -32,10 +31,12 @@ export const BoxButton = styled.div<Active>`
         ? css`
             left: calc(100% - 28px);
             margin-right: 4px;
+            background-color: ${Colors.colorBackground};
           `
         : css`
             left: 0;
             margin-left: 4px;
+            background-color: ${Colors.colorWhite};
           `}
   }
 `;

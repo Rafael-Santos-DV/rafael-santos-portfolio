@@ -32,4 +32,16 @@ export const BoxService = styled.div`
       transform: scale(1.1, 1.1);
     }
   }
+
+  @media only screen and (max-width: 400px) {
+    height: 130px;
+
+    > strong {
+      font-size: 3.4vw;
+    }
+
+    > img {
+      max-width: 50px;
+    }
+  }
 `;

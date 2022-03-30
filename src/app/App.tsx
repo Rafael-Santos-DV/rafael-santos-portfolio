@@ -109,11 +109,13 @@ const App: React.FC = () => {
           <ColumnPerfilOne
             src={perfinOne}
             title="Foto Rafael Santos Full Stack Developer"
+            // style={{ order: 2 }}
           />
 
           <ColumnPerfilOne
             src={perfinOne}
             title="Foto Rafael Santos Full Stack Developer"
+            // style={{ order: 3 }}
           />
           <BoxSobre theme={getBackground}>
             <h2>Quem sou</h2>

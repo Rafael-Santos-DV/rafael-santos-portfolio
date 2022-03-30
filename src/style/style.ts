@@ -22,6 +22,10 @@ export const Header = styled.header`
   max-width: 1280px;
   margin: 0 auto;
   align-items: center;
+
+  @media only screen and (max-width: 768px) {
+    padding: 14px 20px;
+  }
 `;
 
 export const ColumnLogo = styled.div`
@@ -61,6 +65,9 @@ export const MobileButton = styled.div`
 
   @media only screen and (max-width: 768px) {
     display: flex;
+    > img {
+      width: 45px;
+    }
   }
 `;
 
@@ -92,6 +99,40 @@ export const SectionGrid = styled.section`
     display: block !important;
     max-height: 10px;
   }
+
+  @media only screen and (max-width: 768px) {
+    > :nth-child(3) {
+      order: 3;
+      display: none;
+    }
+    > :nth-child(4) {
+      grid-column: 1 / span 2;
+    }
+  }
+
+  @media only screen and (max-width: 478px) {
+    place-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    > * {
+      grid-column: 1 / span 2;
+    }
+    > :nth-child(1) {
+      order: 2;
+    }
+    > :nth-child(2) {
+      order: 1;
+    }
+    > :nth-child(3) {
+      order: 3;
+    }
+    > :nth-child(4) {
+      order: 4;
+    }
+    > :nth-child(5) {
+      order: 5;
+    }
+  }
 `;
 
 export const ColumnPresentation = styled.div`
@@ -114,16 +155,55 @@ export const ColumnPresentation = styled.div`
     margin: 15px 0;
     font-size: 22px;
   }
+
+  @media only screen and (max-width: 478px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      font-size: 11vw;
+    }
+  }
 `;
 
 export const BoxButtons = styled.div`
   display: flex;
   gap: 10px;
+
+  @media only screen and (max-width: 478px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+    flex-direction: column;
+    width: 100%;
+
+    > div {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      > * {
+        width: 100%;
+        display: block;
+        word-wrap: break-word;
+        padding: 8px 60px;
+        font-size: 5vw;
+      }
+    }
+  }
 `;
 
 export const ColumnPerfilOne = styled.img`
   width: 100%;
   max-width: 420px;
+
+  @media only screen and (max-width: 478px) {
+    max-width: 280px;
+  }
 `;
 
 export const BoxSobre = styled.div`
@@ -137,6 +217,9 @@ export const BoxSobre = styled.div`
     color: ${(props) =>
       props.theme === true ? Colors.colorBackground : Colors.colorWhite};
     font-size: 1.5rem;
+    text-align: center;
+    padding: 0 5px;
+    line-height: 1.2;
   }
 `;
 
@@ -159,10 +242,17 @@ export const BoxServices = styled.div`
   place-items: center;
   justify-content: center;
   grid-row-gap: 15px;
+  grid-column-gap: 10px;
 
   > div:not(:nth-of-type(5)) {
     > strong {
       margin-top: 12px;
     }
+  }
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media only screen and (max-width: 478px) {
+    grid-template-columns: 1fr 1fr;
   }
 `;
