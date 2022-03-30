@@ -19,7 +19,7 @@ export const Header = styled.header`
   justify-content: space-between;
   padding: 14px 60px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   align-items: center;
 `;
@@ -50,7 +50,7 @@ export const Ul = styled.ul`
 
 export const SectionGrid = styled.section`
   width: 100%;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -122,4 +122,29 @@ export const BoxSobre = styled.div`
   }
 `;
 
-export const ContentMain = styled.main``;
+export const SectionServicesMain = styled.main`
+  grid-column: 1 / span 2;
+  width: 100%;
+  text-align: center;
+
+  > h2 {
+    padding: 50px 0;
+    font-size: 2.5rem;
+    color: ${Colors.colorMaster};
+    letter-spacing: 2px;
+  }
+`;
+export const BoxServices = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  justify-content: center;
+  grid-row-gap: 15px;
+
+  > div:not(:nth-of-type(5)) {
+    > strong {
+      margin-top: 12px;
+    }
+  }
+`;
