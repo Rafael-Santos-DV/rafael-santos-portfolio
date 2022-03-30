@@ -26,10 +26,12 @@ export const Header = styled.header`
 
 export const ColumnLogo = styled.div`
   display: flex;
-  justify-content: end;
 `;
 
-export const ColumnNav = styled.nav``;
+export const ColumnNav = styled.nav`
+  display: flex;
+  flex-direction: row;
+`;
 
 export const Ul = styled.ul`
   display: flex;
@@ -40,11 +42,25 @@ export const Ul = styled.ul`
     margin: 0 40px;
     transition: 200ms;
     cursor: pointer;
-    border-bottom: solid 1px ${Colors.colorBackground};
+    border-bottom: 1px solid transparent;
+    color: ${(props) =>
+      props.theme === true ? Colors.colorBackground : Colors.colorWhite};
 
     &:hover {
       border-bottom: 1px solid ${Colors.colorMaster};
     }
+  }
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const MobileButton = styled.div`
+  display: none;
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
   }
 `;
 
@@ -82,9 +98,10 @@ export const ColumnPresentation = styled.div`
   width: 100%;
 
   > h1 {
-    color: ${Colors.colorWhite};
     font-size: 55px;
     letter-spacing: 2px;
+    color: ${(props) =>
+      props.theme === true ? Colors.colorBackground : Colors.colorWhite};
 
     > strong {
       color: ${Colors.colorMaster};
@@ -117,7 +134,8 @@ export const BoxSobre = styled.div`
     margin: 12px 0;
   }
   > p {
-    color: ${Colors.colorWhite};
+    color: ${(props) =>
+      props.theme === true ? Colors.colorBackground : Colors.colorWhite};
     font-size: 1.5rem;
   }
 `;

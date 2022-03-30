@@ -14,6 +14,7 @@ export const GlobalStyles = createGlobalStyle`
 
   html, body {
     height: 100%;
-    background-color: ${Colors.colorBackground};
+    background-color: ${(props) =>
+      props.theme ? Colors.colorWhite : Colors.colorBackground};
   }
 `;

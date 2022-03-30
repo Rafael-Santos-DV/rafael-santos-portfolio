@@ -32,8 +32,8 @@ export const ContainerButton = styled.div<PropsButton>`
             background-color: ${Colors.colorBackground};
           }
         `}
-
   > * {
-    color: ${Colors.colorWhite};
+    color: ${(props) =>
+      props.theme === true ? Colors.colorBackground : Colors.colorWhite};
   }
 `;
