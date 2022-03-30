@@ -17,4 +17,22 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${(props) =>
       props.theme ? Colors.colorWhite : Colors.colorBackground};
   }
+
+  .js-animate-react {
+    opacity: 0;
+  animation: animateItems 1s ease-out;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  }
+
+  @keyframes animateItems {
+    0% {
+      opacity: 0;
+      transform: translate(0, 20%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
 `;

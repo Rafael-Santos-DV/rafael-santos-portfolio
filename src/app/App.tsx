@@ -15,7 +15,6 @@ import {
   SectionServicesMain,
   Ul,
 } from '../style/style';
-
 import logo from '../assets/logo.svg';
 import { ButtonDark } from '../components/button/button';
 import ButtonRectangleRadius from '../components/ButtonRectangleRadius/ButtonRectangleRadius';
@@ -35,10 +34,13 @@ import enableMobile from '../assets/icons-mobile/buttonOne.svg';
 import disableMobile from '../assets/icons-mobile/buttonTwo.svg';
 
 import DarkModel from '../context/contextDark';
+import useAnimate from '../hook/animateCallback';
 
 const App: React.FC = () => {
   const [getBackground, setBackground] = useState(false);
   const [activeMobile, setMobile] = useState(false);
+
+  const init = useAnimate();
 
   useEffect(() => {
     if (localStorage.darkR === 'dark' || localStorage.darkR === undefined) {
@@ -46,7 +48,8 @@ const App: React.FC = () => {
     } else {
       setBackground(true);
     }
-  }, []);
+    init();
+  }, [init]);
 
   useEffect(() => {
     localStorage.darkR = getBackground ? 'light' : 'dark';
@@ -90,7 +93,7 @@ const App: React.FC = () => {
           </ColumnNav>
         </Header>
         <span />
-        <SectionGrid>
+        <SectionGrid id="js-data-scroll-react">
           <ColumnPresentation theme={getBackground}>
             <h1>
               Olá, eu sou o <br /> <strong>Rafael Santos</strong>.
@@ -117,11 +120,12 @@ const App: React.FC = () => {
           />
 
           <ColumnPerfilOne
+            className="js-animate-react"
             src={perfinOne}
             title="Foto Rafael Santos Full Stack Developer"
             // style={{ order: 3 }}
           />
-          <BoxSobre theme={getBackground}>
+          <BoxSobre theme={getBackground} className="js-animate-react">
             <h2>Quem sou</h2>
             <p>
               Meu nome é Rafael Santos, sou Full Stack Developer, com foco em
@@ -130,7 +134,7 @@ const App: React.FC = () => {
             </p>
           </BoxSobre>
           <SectionServicesMain>
-            <h2>Services</h2>
+            <h2 className="js-animate-react">Services</h2>
             <BoxServices>
               <Box>
                 <img src={serviceLoja} alt="icon de um carrinho de comprar" />
