@@ -76,7 +76,11 @@ const App: React.FC = () => {
             <img src={logo} alt="Rafael" title="foto Rafael Developer" />
           </ColumnLogo>
           <ColumnNav>
-            <Ul theme={getBackground}>
+            <Ul
+              theme={getBackground}
+              mobileActive={activeMobile}
+              onClick={() => setMobile(false)}
+            >
               <li title="About">About</li>
               <li title="Projects">Projects</li>
               <li title="Skills">Skills</li>

@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import Colors from './colors';
 
+type mobileActive = {
+  mobileActive: boolean;
+};
+
 export const Container = styled.div`
   display: flex;
   max-height: 100vh;
@@ -37,7 +41,7 @@ export const ColumnNav = styled.nav`
   flex-direction: row;
 `;
 
-export const Ul = styled.ul`
+export const Ul = styled.ul<mobileActive>`
   display: flex;
   align-items: center;
   color: ${Colors.colorWhite};
@@ -56,7 +60,37 @@ export const Ul = styled.ul`
   }
 
   @media only screen and (max-width: 768px) {
-    display: none;
+    display: ${(props) => (props.mobileActive ? 'flex' : 'none')};
+    position: absolute;
+    left: 0;
+    top: 69px;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: ${Colors.colorBackground};
+    gap: 15px;
+    animation: mobileanimate 200ms;
+    > li {
+      color: ${Colors.colorWhite};
+      font-size: 35px;
+      z-index: 1;
+    }
+
+    &::before {
+      content: 'Rafael Santos';
+      font-size: 40px;
+      color: ${Colors.colorMaster};
+      padding: 50px 0 20px 0;
+    }
+
+    @keyframes mobileanimate {
+      from {
+        left: -100%;
+      }
+      to {
+        left: 0;
+      }
+    }
   }
 `;
 
@@ -107,6 +141,10 @@ export const SectionGrid = styled.section`
     }
     > :nth-child(4) {
       grid-column: 1 / span 2;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      padding: 5px;
     }
   }
 
