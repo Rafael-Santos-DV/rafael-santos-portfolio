@@ -294,3 +294,55 @@ export const BoxServices = styled.div`
     grid-template-columns: 1fr 1fr;
   }
 `;
+
+export const SectionSkills = styled.div`
+  order: 6;
+  grid-column: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  color: ${(props) =>
+    props.theme === true ? Colors.colorBackground : Colors.colorWhite};
+  text-align: center;
+  row-gap: 40px;
+
+  > h2 {
+    font-size: 2.5rem;
+    color: ${Colors.colorMaster};
+  }
+`;
+
+export const ContainerSkills = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  place-items: center;
+  row-gap: 40px;
+
+  > div:last-of-type {
+    > img {
+      max-width: 85px;
+    }
+  }
+
+  @media only screen and (max-width: 680px) {
+    grid-template-columns: repeat(5, 1fr);
+
+    > div > img {
+      width: 100%;
+      min-width: 25px;
+      max-width: 40px;
+    }
+  }
+  @media only screen and (max-width: 468px) {
+    > div {
+      > img {
+        width: 100%;
+        min-width: 25px;
+        max-width: 35px;
+      }
+      > strong {
+        font-size: 3vw;
+      }
+    }
+  }
+`;

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import Colors from '../../style/colors';
+import Colors from '../../styles/colors';
 
 type Active = {
   active: boolean;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Colors from '../../style/colors';
+import Colors from '../../styles/colors';
 
 export const BoxService = styled.div`
   width: 100%;

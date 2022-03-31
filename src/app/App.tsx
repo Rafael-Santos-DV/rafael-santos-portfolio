@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { GlobalStyles } from '../style/globalstyles';
+import { GlobalStyles } from '../styles/globalstyles';
 import {
   BoxButtons,
   BoxServices,
@@ -9,12 +9,14 @@ import {
   ColumnPerfilOne,
   ColumnPresentation,
   Container,
+  ContainerSkills,
   Header,
   MobileButton,
   SectionGrid,
   SectionServicesMain,
+  SectionSkills,
   Ul,
-} from '../style/style';
+} from '../styles/style';
 import logo from '../assets/logo.svg';
 import { ButtonDark } from '../components/button/button';
 import ButtonRectangleRadius from '../components/ButtonRectangleRadius/ButtonRectangleRadius';
@@ -33,8 +35,29 @@ import setting from '../assets/icons-services/setting.svg';
 import enableMobile from '../assets/icons-mobile/buttonOne.svg';
 import disableMobile from '../assets/icons-mobile/buttonTwo.svg';
 
+// import skills svg
+import html from '../assets/icons-skills/file_type_html_icon.svg';
+import Css from '../assets/icons-skills/file_type_css_icon.svg';
+import JavaScript from '../assets/icons-skills/file_type_js_official_icon.svg';
+import Sass from '../assets/icons-skills/sass_icon.svg';
+import react from '../assets/icons-skills/react_original_logo_icon.svg';
+import StyledComp from '../assets/icons-skills/file_type_styled_icon.svg';
+import Express from '../assets/icons-skills/expressjs_logo_icon.svg';
+import Nodejs from '../assets/icons-skills/nodejs_plain_logo_icon.svg';
+import socket from '../assets/icons-skills/socket_io_logo_icon.svg';
+import typescript from '../assets/icons-skills/file_type_typescript_official_icon.svg';
+import python from '../assets/icons-skills/python.svg';
+import mysql from '../assets/icons-skills/mysql_original_wordmark.svg';
+import mongo from '../assets/icons-skills/mongodb_original_logo.svg';
+import github from '../assets/icons-skills/github_git_icon.svg';
+import git from '../assets/icons-skills/git_icon.svg';
+import firebase from '../assets/icons-skills/file_type_firebase_icon.svg';
+import figma from '../assets/icons-skills/figma_logo_icon.svg';
+import aws from '../assets/icons-skills/amazon_aws_logo_icon.svg';
+
 import DarkModel from '../context/contextDark';
 import useAnimate from '../hook/animateCallback';
+import BoxIcon from '../components/box-icon/box-icon';
 
 const App: React.FC = () => {
   const [getBackground, setBackground] = useState(false);
@@ -137,7 +160,7 @@ const App: React.FC = () => {
             <h2 className="js-animate-react">Services</h2>
             <BoxServices>
               <Box>
-                <img src={serviceLoja} alt="icon de um carrinho de comprar" />
+                <img src={serviceLoja} alt="icon de um carrinho de compra" />
                 <strong>
                   E-commerce <br /> (Loja Virtual)
                 </strong>
@@ -178,6 +201,109 @@ const App: React.FC = () => {
               </Box>
             </BoxServices>
           </SectionServicesMain>
+          <SectionSkills theme={getBackground}>
+            <h2 className="js-animate-react">Skills</h2>
+            <ContainerSkills className="js-animate-react">
+              <BoxIcon
+                alt="logo HMTL5"
+                src={html}
+                text="HTML5"
+                title="logo html5"
+              />
+              <BoxIcon
+                alt="logo CSS3"
+                src={Css}
+                text="CSS3"
+                title="logo CSS3"
+              />
+              <BoxIcon
+                alt="logo JavaScript"
+                src={JavaScript}
+                text="JavaScript"
+                title="logo JavaScript"
+              />
+              <BoxIcon
+                alt="logo Sass"
+                src={Sass}
+                text="Sass"
+                title="logo Sass"
+              />
+              <BoxIcon
+                alt="logo ReactJs"
+                src={react}
+                text="JavaScript"
+                title="logo ReactJS"
+              />
+              <BoxIcon
+                alt="logo Styled Components"
+                src={StyledComp}
+                text="Styled Components"
+                title="logo Styled Components"
+              />
+              <BoxIcon
+                alt="logo Express"
+                src={Express}
+                text="Express"
+                title="logo Express"
+              />
+              <BoxIcon
+                alt="logo Node.Js"
+                src={Nodejs}
+                text="Node.Js"
+                title="logo Node.Js"
+              />
+              <BoxIcon
+                alt="logo Socket.io"
+                src={socket}
+                text="Socket.IO"
+                title="logo Socket.io"
+              />
+              <BoxIcon
+                alt="logo TypeScript"
+                src={typescript}
+                text="TypeScript"
+                title="logo TypeScript"
+              />
+              <BoxIcon
+                alt="logo Python"
+                src={python}
+                text="Python"
+                title="logo Python"
+              />
+              <BoxIcon
+                alt="logo Mysql"
+                src={mysql}
+                text="Mysql"
+                title="logo Mysql"
+              />
+              <BoxIcon
+                alt="logo JavaScript"
+                src={mongo}
+                text="JavaScript"
+                title="logo JavaScript"
+              />
+              <BoxIcon
+                alt="logo GitHub"
+                src={github}
+                text="GitHub"
+                title="logo GitHub"
+              />
+              <BoxIcon alt="logo Git" src={git} text="Git" title="logo Git" />
+              <BoxIcon
+                alt="logo FireBase"
+                src={firebase}
+                text="FireBase"
+                title="logo FireBase"
+              />
+              <BoxIcon
+                alt="logo Figma"
+                src={figma}
+                text="Figma"
+                title="logo Figma"
+              />
+              <BoxIcon alt="logo AWS" src={aws} text="AWS" title="logo AWS" />
+            </ContainerSkills>
+          </SectionSkills>
         </SectionGrid>
       </Container>
     </DarkModel.Provider>
