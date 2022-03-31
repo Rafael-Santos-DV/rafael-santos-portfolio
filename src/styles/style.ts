@@ -70,6 +70,7 @@ export const Ul = styled.ul<mobileActive>`
     background-color: ${Colors.colorBackground};
     gap: 15px;
     animation: mobileanimate 200ms;
+    z-index: 9999999;
     > li {
       color: ${Colors.colorWhite};
       font-size: 35px;
