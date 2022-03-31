@@ -296,7 +296,7 @@ export const BoxServices = styled.div`
   }
 `;
 
-export const SectionSkills = styled.div`
+export const SectionSkills = styled.section`
   order: 6;
   grid-column: 1 / span 2;
   display: flex;
@@ -309,6 +309,7 @@ export const SectionSkills = styled.div`
   > h2 {
     font-size: 2.5rem;
     color: ${Colors.colorMaster};
+    letter-spacing: 2px;
   }
 `;
 
@@ -346,4 +347,22 @@ export const ContainerSkills = styled.div`
       }
     }
   }
+`;
+
+export const SectionProjects = styled.section`
+  order: 7;
+  grid-column: 1 / span 2;
+  text-align: center;
+
+  > h2 {
+    font-size: 2.5rem;
+    color: ${Colors.colorMaster};
+    letter-spacing: 2px;
+    padding: 50px 0;
+  }
+`;
+
+export const ContainerProjects = styled.div`
+  display: flex;
+  column-gap: 20px;
 `;

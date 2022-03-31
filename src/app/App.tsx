@@ -9,10 +9,12 @@ import {
   ColumnPerfilOne,
   ColumnPresentation,
   Container,
+  ContainerProjects,
   ContainerSkills,
   Header,
   MobileButton,
   SectionGrid,
+  SectionProjects,
   SectionServicesMain,
   SectionSkills,
   Ul,
@@ -40,7 +42,7 @@ import html from '../assets/icons-skills/file_type_html_icon.svg';
 import Css from '../assets/icons-skills/file_type_css_icon.svg';
 import JavaScript from '../assets/icons-skills/file_type_js_official_icon.svg';
 import Sass from '../assets/icons-skills/sass_icon.svg';
-import react from '../assets/icons-skills/react_original_logo_icon.svg';
+import reactImage from '../assets/icons-skills/react_original_logo_icon.svg';
 import StyledComp from '../assets/icons-skills/file_type_styled_icon.svg';
 import Express from '../assets/icons-skills/expressjs_logo_icon.svg';
 import Nodejs from '../assets/icons-skills/nodejs_plain_logo_icon.svg';
@@ -55,9 +57,13 @@ import firebase from '../assets/icons-skills/file_type_firebase_icon.svg';
 import figma from '../assets/icons-skills/figma_logo_icon.svg';
 import aws from '../assets/icons-skills/amazon_aws_logo_icon.svg';
 
+// import image projects
+import projectMariahStore from '../assets/images-projects/project-mariah-store.png';
+
 import DarkModel from '../context/contextDark';
 import useAnimate from '../hook/animateCallback';
 import BoxIcon from '../components/box-icon/box-icon';
+import BoxProject from '../components/box-project/box-project';
 
 const App: React.FC = () => {
   const [getBackground, setBackground] = useState(false);
@@ -230,7 +236,7 @@ const App: React.FC = () => {
               />
               <BoxIcon
                 alt="logo ReactJs"
-                src={react}
+                src={reactImage}
                 text="JavaScript"
                 title="logo ReactJS"
               />
@@ -304,6 +310,25 @@ const App: React.FC = () => {
               <BoxIcon alt="logo AWS" src={aws} text="AWS" title="logo AWS" />
             </ContainerSkills>
           </SectionSkills>
+          <SectionProjects theme={getBackground}>
+            <h2>Projects</h2>
+            <ContainerProjects>
+              <BoxProject
+                alt="imagem site marihStore"
+                nameProject="E-commerce MariahStore"
+                title="Imagem E-commerce MariahStore"
+                url={projectMariahStore}
+                urlTechUsed={[reactImage, StyledComp, Express, mongo, Nodejs]}
+              />
+              <BoxProject
+                alt="imagem site marihStore"
+                nameProject="E-commerce MariahStore"
+                title="Imagem E-commerce MariahStore"
+                url={projectMariahStore}
+                urlTechUsed={[reactImage, StyledComp, Express, mongo, Nodejs]}
+              />
+            </ContainerProjects>
+          </SectionProjects>
         </SectionGrid>
       </Container>
     </DarkModel.Provider>
