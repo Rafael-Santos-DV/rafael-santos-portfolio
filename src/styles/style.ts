@@ -238,7 +238,8 @@ export const BoxButtons = styled.div`
 
 export const ColumnPerfilOne = styled.img`
   width: 100%;
-  max-width: 300px;
+  max-width: 260px;
+  margin: 0 auto;
 
   @media only screen and (max-width: 478px) {
     max-width: 220px;
