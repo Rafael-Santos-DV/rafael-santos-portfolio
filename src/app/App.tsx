@@ -22,7 +22,7 @@ import {
 import logo from '../assets/logo.svg';
 import { ButtonDark } from '../components/button/button';
 import ButtonRectangleRadius from '../components/ButtonRectangleRadius/ButtonRectangleRadius';
-import perfinOne from '../assets/rafael-perfil-one.svg';
+import perfinOne from '../assets/rafael-perfil-two.svg';
 import { Box } from '../components/box/box';
 
 // import services svg
