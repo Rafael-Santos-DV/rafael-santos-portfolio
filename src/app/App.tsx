@@ -149,12 +149,12 @@ const App: React.FC = () => {
           />
 
           <ColumnPerfilOne
-            className="js-animate-react"
+            className="js-animate-all"
             src={perfinOne}
             title="Foto Rafael Santos Full Stack Developer"
             // style={{ order: 3 }}
           />
-          <BoxSobre theme={getBackground} className="js-animate-react">
+          <BoxSobre theme={getBackground} className="js-animate-all">
             <h2>Quem sou</h2>
             <p>
               Meu nome é Rafael Santos, sou Full Stack Developer, com foco em
@@ -163,7 +163,7 @@ const App: React.FC = () => {
             </p>
           </BoxSobre>
           <SectionServicesMain>
-            <h2 className="js-animate-react">Services</h2>
+            <h2 className="js-animate-all">Services</h2>
             <BoxServices>
               <Box>
                 <img src={serviceLoja} alt="icon de um carrinho de compra" />
@@ -208,8 +208,8 @@ const App: React.FC = () => {
             </BoxServices>
           </SectionServicesMain>
           <SectionSkills theme={getBackground}>
-            <h2 className="js-animate-react">Skills</h2>
-            <ContainerSkills className="js-animate-react">
+            <h2 className="js-animate-all">Skills</h2>
+            <ContainerSkills className="js-animate-all">
               <BoxIcon
                 alt="logo HMTL5"
                 src={html}
@@ -312,7 +312,7 @@ const App: React.FC = () => {
           </SectionSkills>
           <SectionProjects theme={getBackground}>
             <h2>Projects</h2>
-            <ContainerProjects>
+            <ContainerProjects className="js-animate-all">
               <BoxProject
                 alt="imagem site marihStore"
                 nameProject="E-commerce MariahStore"

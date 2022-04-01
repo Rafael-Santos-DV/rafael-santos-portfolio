@@ -3,23 +3,34 @@ import { useCallback } from 'react';
 const useAnimate = () => {
   return useCallback(() => {
     const elements = Array.from(
-      document.querySelectorAll('.js-animate-react')
+      document.querySelectorAll('.js-animate-all')
     ) as HTMLElement[];
     const elementScroll = document.getElementById(
       'js-data-scroll-react'
     ) as HTMLElement;
 
-    function isOnScreen(element: HTMLElement): boolean {
-      const rect = element.getBoundingClientRect();
-      return rect.top > 0 && rect.bottom < window.innerHeight + 150;
-    }
-
     if (elementScroll) {
       elementScroll.addEventListener('scroll', () => {
         elements.forEach((element) => {
-          if (isOnScreen(element)) {
-            element.style.animationPlayState = 'running';
+          const windowHeight = window.innerHeight * 0.6;
+          const elementRect = element.getBoundingClientRect();
+          const isTrueOrFalseElement = elementRect.top - windowHeight < 0;
+
+          if (isTrueOrFalseElement) {
+            element.classList.remove('js-animate-react');
+            element.classList.add('js-animate-init-all');
+          } else {
+            element.classList.remove('js-animate-init-all');
+            element.classList.add('js-animate-react');
+            // element.style.animationPlayState = 'paused';
           }
+
+          // animation parte de cima
+          // if (elementRect.top < 0) {
+          //   if (Math.abs(elementRect.top) - elementRect.height >= 0) {
+          //     element.classList.add('js-animate-react');
+          //   }
+          // }
         });
       });
     }

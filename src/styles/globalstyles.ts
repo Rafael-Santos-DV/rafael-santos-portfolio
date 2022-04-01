@@ -17,22 +17,46 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${(props) =>
       props.theme ? Colors.colorWhite : Colors.colorBackground};
   }
+  .js-animate-all {
+    opacity: 0;
+  }
+
+  .js-animate-init-all {
+    opacity: 0;
+    animation: animateItems 500ms cubic-bezier(.82,.24,.83,.67);
+    animation-fill-mode: forwards;
+    /* animation-play-state: paused; */
+
+  }
 
   .js-animate-react {
     opacity: 0;
-  animation: animateItems 1s ease-out;
-  animation-fill-mode: forwards;
-  animation-play-state: paused;
+    animation: RemoveAnimateItems 500ms cubic-bezier(.82,.24,.83,.67);
+    animation-fill-mode: forwards;
+    /* animation-play-state: paused; */
   }
 
   @keyframes animateItems {
     0% {
       opacity: 0;
-      transform: translate(0, 20%);
+      transform: translateX(-20%);
     }
     100% {
       opacity: 1;
       transform: translate(0);
+    }
+  }
+
+  @keyframes RemoveAnimateItems {
+
+    0% {
+      opacity: 1;
+      transform: translate(0%);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateX(-20%);
     }
   }
 `;
