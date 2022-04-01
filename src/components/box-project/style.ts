@@ -7,17 +7,19 @@ type urlBack = {
 
 export const ContainerProject = styled.div<urlBack>`
   background-image: url(${(props) => props.url});
-  background-size: cover;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   width: 100%;
   max-width: 526px;
   height: 345px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
   text-align: center;
-  row-gap: 30px;
+
   transition: transform 200ms cubic-bezier(1, 0, 0, 1);
   cursor: pointer;
   border: 1px solid transparent;
@@ -47,6 +49,20 @@ export const ContainerProject = styled.div<urlBack>`
     }
   }
 
+  @media only screen and (max-width: 1200px) {
+    height: 325px;
+    > h4 {
+      font-size: 1.1rem;
+    }
+  }
+  @media only screen and (max-width: 968px) {
+    height: 225px;
+  }
+
+  @media only screen and (max-width: 590px) {
+    min-width: 100%;
+  }
+
   :hover {
     transform: scale(1.1, 1.1);
     border: 1px solid ${Colors.colorMaster};
@@ -70,5 +86,10 @@ export const BoxInfos = styled.div`
   > img {
     width: 100%;
     max-width: 40px;
+  }
+  @media only screen and (max-width: 1200px) {
+    > img {
+      max-width: 25px;
+    }
   }
 `;

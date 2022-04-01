@@ -327,6 +327,34 @@ const App: React.FC = () => {
                 url={projectMariahStore}
                 urlTechUsed={[reactImage, StyledComp, Express, mongo, Nodejs]}
               />
+              <BoxProject
+                alt="imagem site marihStore"
+                nameProject="E-commerce MariahStore"
+                title="Imagem E-commerce MariahStore"
+                url={projectMariahStore}
+                urlTechUsed={[reactImage, StyledComp, Express, mongo, Nodejs]}
+              />
+              <BoxProject
+                alt="imagem site marihStore"
+                nameProject="E-commerce MariahStore"
+                title="Imagem E-commerce MariahStore"
+                url={projectMariahStore}
+                urlTechUsed={[reactImage, StyledComp, Express, mongo, Nodejs]}
+              />
+              <BoxProject
+                alt="imagem site marihStore"
+                nameProject="E-commerce MariahStore"
+                title="Imagem E-commerce MariahStore"
+                url={projectMariahStore}
+                urlTechUsed={[reactImage, StyledComp, Express, mongo, Nodejs]}
+              />
+              <BoxProject
+                alt="imagem site marihStore"
+                nameProject="E-commerce MariahStore"
+                title="Imagem E-commerce MariahStore"
+                url={projectMariahStore}
+                urlTechUsed={[reactImage, StyledComp, Express, mongo, Nodejs]}
+              />
             </ContainerProjects>
           </SectionProjects>
         </SectionGrid>

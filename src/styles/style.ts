@@ -353,6 +353,7 @@ export const SectionProjects = styled.section`
   order: 7;
   grid-column: 1 / span 2;
   text-align: center;
+  width: 100%;
 
   > h2 {
     font-size: 2.5rem;
@@ -363,6 +364,23 @@ export const SectionProjects = styled.section`
 `;
 
 export const ContainerProjects = styled.div`
-  display: flex;
-  column-gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  width: 100%;
+
+  @media only screen and (max-width: 590px) {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: mandatory;
+    padding: 55px;
+
+    > div {
+      scroll-snap-align: start;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 `;
