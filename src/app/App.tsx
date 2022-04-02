@@ -135,12 +135,12 @@ const App: React.FC = () => {
               <ButtonRectangleRadius
                 theme={getBackground}
                 text="Download CV"
-                type="normal"
+                type="file"
               />
               <ButtonRectangleRadius
                 theme={getBackground}
                 text="GitHub"
-                type="file"
+                type="normal"
               />
             </BoxButtons>
           </ColumnPresentation>
@@ -317,6 +317,7 @@ const App: React.FC = () => {
             <h2>Projects</h2>
             <ContainerProjects className="js-animate-all">
               <BoxProject
+                urlProject="https://mariahstore.online/"
                 alt="imagem site marihStore"
                 nameProject="E-commerce MariahStore"
                 title="Imagem E-commerce MariahStore"
@@ -324,6 +325,7 @@ const App: React.FC = () => {
                 urlTechUsed={[reactImage, StyledComp, Express, mongo, Nodejs]}
               />
               <BoxProject
+                urlProject="https://sportnetnew.com/"
                 alt="imagem site Sportnet"
                 nameProject="Site de Notícias"
                 title="Imagem site Sportnet"
@@ -331,6 +333,7 @@ const App: React.FC = () => {
                 urlTechUsed={[reactImage, StyledComp, Nodejs]}
               />
               <BoxProject
+                urlProject="https://palpites-futebol.netlify.app/"
                 alt="imagem site Palites de Futebol"
                 nameProject="Palpites de Futebol"
                 title="Imagem site Palites de Futebol"
@@ -338,6 +341,7 @@ const App: React.FC = () => {
                 urlTechUsed={[reactImage, StyledComp, Express, mongo, Nodejs]}
               />
               <BoxProject
+                urlProject="https://chatmenetwork.netlify.com"
                 alt="imagem rede Social ChatMe"
                 nameProject="Rede Social ChatMe"
                 title="Imagem Rede Social ChatMe"

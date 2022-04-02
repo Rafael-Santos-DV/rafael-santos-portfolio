@@ -7,6 +7,7 @@ interface ParamsProject {
   alt: string;
   nameProject: string;
   urlTechUsed: string[];
+  urlProject: string;
 }
 
 const BoxProject: React.FC<ParamsProject> = ({
@@ -15,6 +16,7 @@ const BoxProject: React.FC<ParamsProject> = ({
   title,
   url,
   urlTechUsed,
+  urlProject,
 }) => {
   return (
     <ContainerProject url={url} title={title}>
@@ -25,7 +27,9 @@ const BoxProject: React.FC<ParamsProject> = ({
         ))}
       </BoxInfos>
       <div className="button-visit">
-        <a href="http://">Visitar Projeto</a>
+        <a href={urlProject} target="_blank" rel="noreferrer">
+          Visitar Projeto
+        </a>
       </div>
     </ContainerProject>
   );
