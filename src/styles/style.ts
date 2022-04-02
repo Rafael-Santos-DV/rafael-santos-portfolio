@@ -244,6 +244,12 @@ export const ColumnPerfilOne = styled.img`
   @media only screen and (max-width: 478px) {
     max-width: 220px;
   }
+
+  &.student {
+    opacity: 0;
+    border-radius: 30px;
+    max-width: 350px;
+  }
 `;
 
 export const BoxSobre = styled.div`

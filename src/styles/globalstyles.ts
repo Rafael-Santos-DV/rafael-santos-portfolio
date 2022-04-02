@@ -10,6 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     list-style: none;
     font-family: 'Aubrey', cursive;
+    scroll-behavior: smooth;
   }
 
   html, body {

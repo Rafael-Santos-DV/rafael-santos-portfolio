@@ -37,6 +37,8 @@ import setting from '../assets/icons-services/setting.svg';
 import enableMobile from '../assets/icons-mobile/buttonOne.svg';
 import disableMobile from '../assets/icons-mobile/buttonTwo.svg';
 
+import imageStudentProgrammer from '../assets/student-programmer.jpg';
+
 // import skills svg
 import html from '../assets/icons-skills/file_type_html_icon.svg';
 import Css from '../assets/icons-skills/file_type_css_icon.svg';
@@ -152,9 +154,9 @@ const App: React.FC = () => {
           />
 
           <ColumnPerfilOne
-            className="js-animate-all"
-            src={perfinOne}
-            title="Foto Rafael Santos Full Stack Developer"
+            className="js-animate-all student"
+            src={imageStudentProgrammer}
+            title="Foto Student of programmer"
             // style={{ order: 3 }}
           />
           <BoxSobre theme={getBackground} className="js-animate-all">
