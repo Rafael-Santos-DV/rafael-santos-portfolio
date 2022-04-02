@@ -61,7 +61,7 @@
     "max-len": [
       "warn",
       {
-        "code": 100
+        "code": 125
       }
     ],
     "react-hooks/rules-of-hooks": "error",

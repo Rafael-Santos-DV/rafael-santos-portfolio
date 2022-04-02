@@ -15,8 +15,7 @@ const ButtonRectangleRadius: React.FC<PropsButton> = ({
   <ContainerButton type={type} theme={type === 'file' ? theme : false}>
     {type === 'file' ? (
       <a
-        href="https://github.com/Rafael-Santos-DV/rafael-santos-portfolio/tree/master/src/resume/
-        curriculo-rafael-new.docx"
+        href="https://github.com/Rafael-Santos-DV/rafael-santos-portfolio/raw/master/src/resume/curriculo-rafael-new.docx"
         download
       >
         {text}
