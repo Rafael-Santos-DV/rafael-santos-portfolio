@@ -367,14 +367,14 @@ export const SectionProjects = styled.section`
 export const ContainerProjects = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 35px;
+  gap: 35px 20px;
   width: 100%;
 
   @media only screen and (max-width: 590px) {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: mandatory;
-    padding: 55px;
+    padding: 55px 40px;
 
     > div {
       scroll-snap-align: start;

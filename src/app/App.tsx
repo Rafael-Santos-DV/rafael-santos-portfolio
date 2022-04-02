@@ -58,7 +58,10 @@ import figma from '../assets/icons-skills/figma_logo_icon.svg';
 import aws from '../assets/icons-skills/amazon_aws_logo_icon.svg';
 
 // import image projects
-import projectMariahStore from '../assets/images-projects/project-mariah-store.png';
+import projectMariahStore from '../assets/images-projects/project-mariah.png';
+import projectSportnet from '../assets/images-projects/project-sportnet.png';
+import projectPalpites from '../assets/images-projects/project-palpites.png';
+import projectChat from '../assets/images-projects/project-chat.png';
 
 import DarkModel from '../context/contextDark';
 import useAnimate from '../hook/animateCallback';
@@ -321,39 +324,32 @@ const App: React.FC = () => {
                 urlTechUsed={[reactImage, StyledComp, Express, mongo, Nodejs]}
               />
               <BoxProject
-                alt="imagem site marihStore"
-                nameProject="E-commerce MariahStore"
-                title="Imagem E-commerce MariahStore"
-                url={projectMariahStore}
+                alt="imagem site Sportnet"
+                nameProject="Site de Notícias"
+                title="Imagem site Sportnet"
+                url={projectSportnet}
+                urlTechUsed={[reactImage, StyledComp, Nodejs]}
+              />
+              <BoxProject
+                alt="imagem site Palites de Futebol"
+                nameProject="Palpites de Futebol"
+                title="Imagem site Palites de Futebol"
+                url={projectPalpites}
                 urlTechUsed={[reactImage, StyledComp, Express, mongo, Nodejs]}
               />
               <BoxProject
-                alt="imagem site marihStore"
-                nameProject="E-commerce MariahStore"
-                title="Imagem E-commerce MariahStore"
-                url={projectMariahStore}
-                urlTechUsed={[reactImage, StyledComp, Express, mongo, Nodejs]}
-              />
-              <BoxProject
-                alt="imagem site marihStore"
-                nameProject="E-commerce MariahStore"
-                title="Imagem E-commerce MariahStore"
-                url={projectMariahStore}
-                urlTechUsed={[reactImage, StyledComp, Express, mongo, Nodejs]}
-              />
-              <BoxProject
-                alt="imagem site marihStore"
-                nameProject="E-commerce MariahStore"
-                title="Imagem E-commerce MariahStore"
-                url={projectMariahStore}
-                urlTechUsed={[reactImage, StyledComp, Express, mongo, Nodejs]}
-              />
-              <BoxProject
-                alt="imagem site marihStore"
-                nameProject="E-commerce MariahStore"
-                title="Imagem E-commerce MariahStore"
-                url={projectMariahStore}
-                urlTechUsed={[reactImage, StyledComp, Express, mongo, Nodejs]}
+                alt="imagem rede Social ChatMe"
+                nameProject="Rede Social ChatMe"
+                title="Imagem Rede Social ChatMe"
+                url={projectChat}
+                urlTechUsed={[
+                  reactImage,
+                  StyledComp,
+                  Express,
+                  mongo,
+                  Nodejs,
+                  socket,
+                ]}
               />
             </ContainerProjects>
           </SectionProjects>
