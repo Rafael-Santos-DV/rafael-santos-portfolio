@@ -27,7 +27,8 @@ export const ContainerProject = styled.div<urlBack>`
 
   > h4 {
     font-size: 1.5rem;
-    color: #fff;
+    color: ${Colors.colorMaster};
+    padding: 10px 0;
   }
 
   > div.button-visit {
@@ -86,6 +87,8 @@ export const BoxInfos = styled.div`
   > img {
     width: 100%;
     max-width: 40px;
+    border: 1px solid ${Colors.colorMaster};
+    border-radius: 4px;
   }
   @media only screen and (max-width: 1200px) {
     > img {
