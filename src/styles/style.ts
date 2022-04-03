@@ -391,3 +391,53 @@ export const ContainerProjects = styled.div`
     }
   }
 `;
+
+export const ContainerContato = styled.footer`
+  grid-column: 1 / span 2;
+  order: 8;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  row-gap: 40px;
+  flex-direction: column;
+  padding-top: 20px;
+
+  > h4 {
+    font-size: 2.5rem;
+    color: ${Colors.colorMaster};
+    letter-spacing: 2px;
+    padding-bottom: 30px;
+  }
+`;
+
+export const RowContato = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 25px;
+  justify-content: center;
+  align-items: center;
+
+  > * {
+    color: ${(props) =>
+      props.theme === true ? Colors.colorBackground : Colors.colorWhite};
+  }
+
+  @media only screen and (max-width: 680px) {
+    display: flex;
+    row-gap: 40px;
+    flex-wrap: wrap;
+  }
+`;
+export const BoxContato = styled.a`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 8px;
+  font-size: 1rem;
+
+  > img {
+    width: 100%;
+    max-width: 50px;
+  }
+`;

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { GlobalStyles } from '../styles/globalstyles';
 import {
   BoxButtons,
+  BoxContato,
   BoxServices,
   BoxSobre,
   ColumnLogo,
@@ -9,10 +10,12 @@ import {
   ColumnPerfilOne,
   ColumnPresentation,
   Container,
+  ContainerContato,
   ContainerProjects,
   ContainerSkills,
   Header,
   MobileButton,
+  RowContato,
   SectionGrid,
   SectionProjects,
   SectionServicesMain,
@@ -69,6 +72,12 @@ import DarkModel from '../context/contextDark';
 import useAnimate from '../hook/animateCallback';
 import BoxIcon from '../components/box-icon/box-icon';
 import BoxProject from '../components/box-project/box-project';
+import ContainerDevelopment from '../components/project-development/project';
+
+// icons contato
+import email from '../assets/icons-contato/email.svg';
+import linkedin from '../assets/icons-contato/linkedin.svg';
+import telefone from '../assets/icons-contato/telefone.svg';
 
 const App: React.FC = () => {
   const [getBackground, setBackground] = useState(false);
@@ -357,8 +366,57 @@ const App: React.FC = () => {
                   socket,
                 ]}
               />
+              {/* container project production */}
+              <ContainerDevelopment />
+              <ContainerDevelopment />
+              {/* container project production */}
             </ContainerProjects>
           </SectionProjects>
+          <ContainerContato className="js-animate-all">
+            <h4>Contact</h4>
+            <RowContato theme={getBackground}>
+              <BoxContato
+                href="https://github.com/rafael-santos-dv"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <img src={github} alt="icon de email" title="icon de email" />
+                <span>E-mail</span>
+                <strong>/rafael-santos-dv</strong>
+              </BoxContato>
+              <BoxContato
+                href="mailto:santosrafaell187@gmail.com"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <img src={email} alt="icon de email" title="icon de email" />
+                <span>E-mail</span>
+                <strong>santosrafaell187@gmail.com</strong>
+              </BoxContato>
+              <BoxContato
+                href="https://linkedin.com/in/rafaelsant-dev"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <img
+                  src={linkedin}
+                  alt="icon linkedin"
+                  title="icon do lindedin"
+                />
+                <span>Linkedin</span>
+                <strong>@rafaelsant-dev</strong>
+              </BoxContato>
+              <BoxContato href="https://" rel="noreferrer" target="_blank">
+                <img
+                  src={telefone}
+                  alt="icon de telefone"
+                  title="icon de telefone"
+                />
+                <span>Telefone</span>
+                <strong>(93) 992326867</strong>
+              </BoxContato>
+            </RowContato>
+          </ContainerContato>
         </SectionGrid>
       </Container>
     </DarkModel.Provider>
