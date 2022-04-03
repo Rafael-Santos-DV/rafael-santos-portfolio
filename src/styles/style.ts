@@ -115,6 +115,7 @@ export const SectionGrid = styled.section`
   padding: 100px 50px 80px;
   align-items: center;
   row-gap: 60px;
+  column-gap: 10px;
   overflow-y: scroll;
 
   scrollbar-width: thin;
@@ -131,11 +132,14 @@ export const SectionGrid = styled.section`
     background-color: ${Colors.colorBackground};
     border-radius: 30px;
     border: 1px solid ${Colors.colorWhite};
-    display: block !important;
     max-height: 10px;
   }
 
   @media only screen and (max-width: 768px) {
+    column-gap: 40px;
+    justify-content: center;
+    align-items: center;
+
     > :nth-child(3) {
       order: 3;
       display: none;
@@ -149,7 +153,12 @@ export const SectionGrid = styled.section`
     }
   }
 
-  @media only screen and (max-width: 478px) {
+  /* @media only screen and (max-width: 680px) {
+    grid-column: 1 / span 2;
+    order: 1;
+  } */
+
+  @media only screen and (max-width: 680px) {
     place-items: center;
     padding-left: 10px;
     padding-right: 10px;
@@ -195,7 +204,13 @@ export const ColumnPresentation = styled.div`
     font-size: 22px;
   }
 
-  @media only screen and (max-width: 478px) {
+  @media only screen and (max-width: 700px) {
+    > h1 {
+      font-size: 2rem;
+    }
+  }
+
+  @media only screen and (max-width: 680px) {
     display: flex;
     flex-direction: column;
     justify-content: center;

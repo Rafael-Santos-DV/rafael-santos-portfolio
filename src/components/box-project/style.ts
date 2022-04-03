@@ -22,7 +22,7 @@ export const ContainerProject = styled.div<urlBack>`
 
   transition: transform 200ms cubic-bezier(1, 0, 0, 1);
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 1px solid ${Colors.colorBackground};
   position: relative;
 
   > h4 {

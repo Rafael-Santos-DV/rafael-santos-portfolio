@@ -25,7 +25,7 @@ import {
 import logo from '../assets/logo.svg';
 import { ButtonDark } from '../components/button/button';
 import ButtonRectangleRadius from '../components/ButtonRectangleRadius/ButtonRectangleRadius';
-import perfinOne from '../assets/rafael-perfil-one.svg';
+// import perfinOne from '../assets/rafael-perfil-one.svg';
 import { Box } from '../components/box/box';
 
 // import services svg
@@ -78,6 +78,9 @@ import ContainerDevelopment from '../components/project-development/project';
 import email from '../assets/icons-contato/email.svg';
 import linkedin from '../assets/icons-contato/linkedin.svg';
 import telefone from '../assets/icons-contato/telefone.svg';
+
+// perfil-vetor-test
+import perfilvetor from '../assets/perfil-vector.svg';
 
 const App: React.FC = () => {
   const [getBackground, setBackground] = useState(false);
@@ -157,16 +160,14 @@ const App: React.FC = () => {
           </ColumnPresentation>
 
           <ColumnPerfilOne
-            src={perfinOne}
+            src={perfilvetor}
             title="Foto Rafael Santos Full Stack Developer"
-            // style={{ order: 2 }}
           />
 
           <ColumnPerfilOne
             className="js-animate-all student"
             src={imageStudentProgrammer}
             title="Foto Student of programmer"
-            // style={{ order: 3 }}
           />
           <BoxSobre theme={getBackground} className="js-animate-all">
             <h2>Quem sou</h2>
