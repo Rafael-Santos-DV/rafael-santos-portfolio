@@ -109,6 +109,21 @@ const App: React.FC = () => {
     setMobile((value) => !value);
   };
 
+  const handleClickAnimate = (classNameEvent: string): void => {
+    const scrollMaster = document.querySelector(
+      '#js-data-scroll-react'
+    ) as HTMLElement;
+
+    const elementScroll = document.querySelector(
+      `.${classNameEvent}`
+    ) as HTMLElement;
+
+    scrollMaster.scrollTo({
+      top: Number(elementScroll.offsetTop) - 130,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <DarkModel.Provider value={getBackground}>
       <Container>
@@ -130,10 +145,34 @@ const App: React.FC = () => {
               mobileActive={activeMobile}
               onClick={() => setMobile(false)}
             >
-              <li title="About">About</li>
-              <li title="Projects">Projects</li>
-              <li title="Skills">Skills</li>
-              <li title="Contact">Contact</li>
+              <li
+                title="About"
+                onClick={() => handleClickAnimate('about')}
+                aria-hidden="true"
+              >
+                About
+              </li>
+              <li
+                title="Projects"
+                onClick={() => handleClickAnimate('projects')}
+                aria-hidden="true"
+              >
+                Projects
+              </li>
+              <li
+                title="Skills"
+                onClick={() => handleClickAnimate('skills')}
+                aria-hidden="true"
+              >
+                Skills
+              </li>
+              <li
+                title="Contact"
+                onClick={() => handleClickAnimate('contact')}
+                aria-hidden="true"
+              >
+                Contact
+              </li>
             </Ul>
             <ButtonDark funcClick={handleClickDark} />
           </ColumnNav>
@@ -169,7 +208,7 @@ const App: React.FC = () => {
             src={imageStudentProgrammer}
             title="Foto Student of programmer"
           />
-          <BoxSobre theme={getBackground} className="js-animate-all">
+          <BoxSobre theme={getBackground} className="js-animate-all about">
             <h2>Quem sou</h2>
             <p>
               Meu nome é Rafael Santos, sou Full Stack Developer, com foco em
@@ -178,7 +217,7 @@ const App: React.FC = () => {
             </p>
           </BoxSobre>
           <SectionServicesMain>
-            <h2 className="js-animate-all">Services</h2>
+            <h2 className="js-animate-all services">Services</h2>
             <BoxServices>
               <Box>
                 <img src={serviceLoja} alt="icon de um carrinho de compra" />
@@ -223,7 +262,7 @@ const App: React.FC = () => {
             </BoxServices>
           </SectionServicesMain>
           <SectionSkills theme={getBackground}>
-            <h2 className="js-animate-all">Skills</h2>
+            <h2 className="js-animate-all skills">Skills</h2>
             <ContainerSkills className="js-animate-all">
               <BoxIcon
                 alt="logo HMTL5"
@@ -326,7 +365,7 @@ const App: React.FC = () => {
             </ContainerSkills>
           </SectionSkills>
           <SectionProjects theme={getBackground}>
-            <h2>Projects</h2>
+            <h2 className="projects">Projects</h2>
             <ContainerProjects className="js-animate-all">
               <BoxProject
                 urlProject="https://mariahstore.online/"
@@ -373,7 +412,7 @@ const App: React.FC = () => {
               {/* container project production */}
             </ContainerProjects>
           </SectionProjects>
-          <ContainerContato className="js-animate-all">
+          <ContainerContato className="js-animate-all contact">
             <h4>Contact</h4>
             <RowContato theme={getBackground}>
               <BoxContato
