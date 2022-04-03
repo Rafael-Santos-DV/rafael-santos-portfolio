@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BoxButton } from './style';
 
 type FuncClick = {
@@ -7,6 +7,11 @@ type FuncClick = {
 
 export const ButtonDark: React.FC<FuncClick> = ({ funcClick }) => {
   const [active, setActive] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (localStorage.darkR) setActive(true);
+  }, []);
+
   const handleChange = (): void => {
     setActive((value) => !value);
     funcClick();
