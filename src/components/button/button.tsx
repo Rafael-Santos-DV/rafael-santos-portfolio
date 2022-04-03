@@ -9,7 +9,8 @@ export const ButtonDark: React.FC<FuncClick> = ({ funcClick }) => {
   const [active, setActive] = useState<boolean>(false);
 
   useEffect(() => {
-    if (localStorage.darkR) setActive(true);
+    if (localStorage.darkR === 'light') setActive(true);
+    else setActive(false);
   }, []);
 
   const handleChange = (): void => {

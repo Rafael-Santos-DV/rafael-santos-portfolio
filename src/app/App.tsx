@@ -416,7 +416,7 @@ const App: React.FC = () => {
             <h4>Contact</h4>
             <RowContato theme={getBackground}>
               <BoxContato
-                href="https://github.com/rafael-santos-dv"
+                href="https://github.com/"
                 rel="noreferrer"
                 target="_blank"
               >
@@ -434,7 +434,7 @@ const App: React.FC = () => {
                 <strong>santosrafaell187@gmail.com</strong>
               </BoxContato>
               <BoxContato
-                href="https://linkedin.com/in/rafael-santdev"
+                href="https://linkedin.com/in/rafael-santde"
                 rel="noreferrer"
                 target="_blank"
               >
