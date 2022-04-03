@@ -421,7 +421,7 @@ const App: React.FC = () => {
                 target="_blank"
               >
                 <img src={github} alt="icon de email" title="icon de email" />
-                <span>E-mail</span>
+                <span>GitHub</span>
                 <strong>/rafael-santos-dv</strong>
               </BoxContato>
               <BoxContato
@@ -434,7 +434,7 @@ const App: React.FC = () => {
                 <strong>santosrafaell187@gmail.com</strong>
               </BoxContato>
               <BoxContato
-                href="https://linkedin.com/in/rafaelsant-dev"
+                href="https://linkedin.com/in/rafael-santdev"
                 rel="noreferrer"
                 target="_blank"
               >
@@ -444,9 +444,13 @@ const App: React.FC = () => {
                   title="icon do lindedin"
                 />
                 <span>Linkedin</span>
-                <strong>@rafaelsant-dev</strong>
+                <strong>@rafael-santdev</strong>
               </BoxContato>
-              <BoxContato href="https://" rel="noreferrer" target="_blank">
+              <BoxContato
+                href="https://api.whatsapp.com/send?phone=5593992326867"
+                rel="noreferrer"
+                target="_blank"
+              >
                 <img
                   src={telefone}
                   alt="icon de telefone"
