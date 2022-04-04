@@ -301,7 +301,7 @@ const App: React.FC = () => {
               <BoxIcon
                 alt="logo ReactJs"
                 src={reactImage}
-                text="JavaScript"
+                text="ReactJS"
                 title="logo ReactJS"
               />
               <BoxIcon
