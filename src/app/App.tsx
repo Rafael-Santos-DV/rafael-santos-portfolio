@@ -137,7 +137,17 @@ const App: React.FC = () => {
             )}
           </MobileButton>
           <ColumnLogo>
-            <img src={logo} alt="Rafael" title="foto Rafael Developer" />
+            <img
+              src={logo}
+              alt="Rafael"
+              title="foto Rafael Developer"
+              onClick={() =>
+                document
+                  .getElementById('js-data-scroll-react')
+                  ?.scrollTo({ top: 0, behavior: 'smooth' })
+              }
+              aria-hidden="true"
+            />
           </ColumnLogo>
           <ColumnNav>
             <Ul

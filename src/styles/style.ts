@@ -34,6 +34,10 @@ export const Header = styled.header`
 
 export const ColumnLogo = styled.div`
   display: flex;
+
+  > img {
+    cursor: pointer;
+  }
 `;
 
 export const ColumnNav = styled.nav`
