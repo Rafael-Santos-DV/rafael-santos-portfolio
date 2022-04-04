@@ -21,7 +21,7 @@ const ButtonRectangleRadius: React.FC<PropsButton> = ({
         {text}
       </a>
     ) : (
-      <a href="http://github.com/">{text}</a>
+      <a href="http://github.com/rafael-santos-dv">{text}</a>
     )}
   </ContainerButton>
 );

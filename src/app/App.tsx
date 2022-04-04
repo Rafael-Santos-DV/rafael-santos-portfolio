@@ -25,7 +25,7 @@ import {
 import logo from '../assets/logo.svg';
 import { ButtonDark } from '../components/button/button';
 import ButtonRectangleRadius from '../components/ButtonRectangleRadius/ButtonRectangleRadius';
-// import perfinOne from '../assets/rafael-perfil-one.svg';
+import perfinOne from '../assets/rafael-perfil-one.svg';
 import { Box } from '../components/box/box';
 
 // import services svg
@@ -80,7 +80,7 @@ import linkedin from '../assets/icons-contato/linkedin.svg';
 import telefone from '../assets/icons-contato/telefone.svg';
 
 // perfil-vetor-test
-import perfilvetor from '../assets/perfil-vector.svg';
+// import perfilvetor from '../assets/perfil-vector.svg';
 
 const App: React.FC = () => {
   const [getBackground, setBackground] = useState(false);
@@ -199,7 +199,7 @@ const App: React.FC = () => {
           </ColumnPresentation>
 
           <ColumnPerfilOne
-            src={perfilvetor}
+            src={perfinOne}
             title="Foto Rafael Santos Full Stack Developer"
           />
 
@@ -416,7 +416,7 @@ const App: React.FC = () => {
             <h4>Contact</h4>
             <RowContato theme={getBackground}>
               <BoxContato
-                href="https://github.com/"
+                href="https://github.com/rafael-santos-dv"
                 rel="noreferrer"
                 target="_blank"
               >
@@ -434,7 +434,7 @@ const App: React.FC = () => {
                 <strong>santosrafaell187@gmail.com</strong>
               </BoxContato>
               <BoxContato
-                href="https://linkedin.com/in/rafael-santde"
+                href="https://linkedin.com/in/rafael-santdev"
                 rel="noreferrer"
                 target="_blank"
               >
