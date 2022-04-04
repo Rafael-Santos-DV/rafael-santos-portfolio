@@ -349,7 +349,7 @@ const App: React.FC = () => {
               <BoxIcon
                 alt="logo JavaScript"
                 src={mongo}
-                text="JavaScript"
+                text="MongoDB"
                 title="logo JavaScript"
               />
               <BoxIcon
