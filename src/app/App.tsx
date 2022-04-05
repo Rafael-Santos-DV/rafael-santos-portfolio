@@ -328,7 +328,7 @@ const App: React.FC = () => {
               <BoxIcon
                 alt="logo ReactJs"
                 src={reactImage}
-                text="JavaScript"
+                text="ReactJS"
                 title="logo ReactJS"
               />
               <BoxIcon
@@ -376,7 +376,7 @@ const App: React.FC = () => {
               <BoxIcon
                 alt="logo JavaScript"
                 src={mongo}
-                text="JavaScript"
+                text="MongoDB"
                 title="logo JavaScript"
               />
               <BoxIcon
