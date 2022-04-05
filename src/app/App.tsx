@@ -87,6 +87,32 @@ const App: React.FC = () => {
   const [activeMobile, setMobile] = useState(false);
 
   const init = useAnimate();
+  useEffect(() => {
+    const title = document.querySelector(
+      '.animate-letter-title'
+    ) as HTMLElement;
+    const name = document.querySelector('.animate-letter-name') as HTMLElement;
+    const TwoText = [Array.from(title.innerHTML), Array.from(name.innerHTML)];
+    name.innerHTML = '';
+    title.innerHTML = '';
+
+    function AtivarName(): void {
+      TwoText[1].forEach((values, index) => {
+        setTimeout(() => {
+          name.innerHTML += values;
+        }, 100 * index);
+      });
+    }
+
+    TwoText[0].forEach((values, index) => {
+      setTimeout(() => {
+        title.innerHTML += values;
+        if (index === TwoText[0].length - 1) {
+          AtivarName();
+        }
+      }, 100 * index);
+    });
+  }, []);
 
   useEffect(() => {
     if (localStorage.darkR === 'dark' || localStorage.darkR === undefined) {
@@ -191,7 +217,8 @@ const App: React.FC = () => {
         <SectionGrid id="js-data-scroll-react">
           <ColumnPresentation theme={getBackground}>
             <h1>
-              Olá, eu sou o <br /> <strong>Rafael Santos</strong>.
+              <span className="animate-letter-title">Olá, eu sou o</span> <br />
+              <strong className="animate-letter-name">Rafael Santos</strong>
             </h1>
             <span>Full Stack Developer</span>
             <BoxButtons>

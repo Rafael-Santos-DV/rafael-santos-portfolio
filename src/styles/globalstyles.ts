@@ -18,6 +18,8 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${(props) =>
       props.theme ? Colors.colorWhite : Colors.colorBackground};
   }
+
+
   .js-animate-all {
     opacity: 0;
   }
