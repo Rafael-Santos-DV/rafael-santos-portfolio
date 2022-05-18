@@ -67,6 +67,7 @@ import projectMariahStore from '../assets/images-projects/project-mariah.png';
 import projectSportnet from '../assets/images-projects/project-sportnet.png';
 import projectPalpites from '../assets/images-projects/project-palpites.png';
 import projectChat from '../assets/images-projects/project-chat.png';
+import projectTicTacToe from '../assets/images-projects/project-ticTacToe.png';
 
 import DarkModel from '../context/contextDark';
 import useAnimate from '../hook/animateCallback';
@@ -441,6 +442,20 @@ const App: React.FC = () => {
                   mongo,
                   Nodejs,
                   socket,
+                ]}
+              />
+              <BoxProject
+                urlProject="https://tictactoe-25969.web.app/"
+                alt="Projeto ticTacToe"
+                nameProject="Game Tic Tac Toe"
+                title="Game Tic Tac Toe"
+                url={projectTicTacToe}
+                urlTechUsed={[
+                  reactImage,
+                  StyledComp,
+                  firebase,
+                  socket,
+                  typescript,
                 ]}
               />
               {/* container project production */}
