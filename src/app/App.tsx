@@ -68,6 +68,7 @@ import projectSportnet from '../assets/images-projects/project-sportnet.png';
 import projectPalpites from '../assets/images-projects/project-palpites.png';
 import projectChat from '../assets/images-projects/project-chat.png';
 import projectTicTacToe from '../assets/images-projects/project-ticTacToe.png';
+import projectAnimes from '../assets/images-projects/project-animes.png';
 
 import DarkModel from '../context/contextDark';
 import useAnimate from '../hook/animateCallback';
@@ -456,6 +457,23 @@ const App: React.FC = () => {
                   firebase,
                   socket,
                   typescript,
+                ]}
+              />
+
+              <BoxProject
+                urlProject="https://lfanimesflix.netlify.app/"
+                alt="Projeto LF animesFlix"
+                nameProject="LF AnimesFlix"
+                title="LF AnimesFlix"
+                url={projectAnimes}
+                urlTechUsed={[
+                  reactImage,
+                  StyledComp,
+                  mongo,
+                  Nodejs,
+                  typescript,
+                  figma,
+                  Express,
                 ]}
               />
               {/* container project production */}
