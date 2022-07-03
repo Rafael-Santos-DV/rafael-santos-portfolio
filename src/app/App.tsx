@@ -61,6 +61,8 @@ import git from '../assets/icons-skills/git_icon.svg';
 import firebase from '../assets/icons-skills/file_type_firebase_icon.svg';
 import figma from '../assets/icons-skills/figma_logo_icon.svg';
 import aws from '../assets/icons-skills/amazon_aws_logo_icon.svg';
+import graphql from '../assets/icons-skills/graphql.svg';
+import nextjs from '../assets/icons-skills/nextjs.svg';
 
 // import image projects
 import projectMariahStore from '../assets/images-projects/project-mariah.png';
@@ -304,109 +306,152 @@ const App: React.FC = () => {
             <h2 className="js-animate-all skills">Skills</h2>
             <ContainerSkills className="js-animate-all">
               <BoxIcon
+                key="icon-1"
                 alt="logo HMTL5"
                 src={html}
                 text="HTML5"
                 title="logo html5"
               />
               <BoxIcon
+                key="icon-2"
                 alt="logo CSS3"
                 src={Css}
                 text="CSS3"
                 title="logo CSS3"
               />
               <BoxIcon
+                key="icon-3"
                 alt="logo JavaScript"
                 src={JavaScript}
                 text="JavaScript"
                 title="logo JavaScript"
               />
               <BoxIcon
+                key="icon-4"
                 alt="logo Sass"
                 src={Sass}
                 text="Sass"
                 title="logo Sass"
               />
               <BoxIcon
+                key="icon-5"
                 alt="logo ReactJs"
                 src={reactImage}
                 text="ReactJS"
                 title="logo ReactJS"
               />
               <BoxIcon
+                key="icon-6"
                 alt="logo Styled Components"
                 src={StyledComp}
                 text="Styled Components"
                 title="logo Styled Components"
               />
               <BoxIcon
+                key="icon-7"
                 alt="logo Express"
                 src={Express}
                 text="Express"
                 title="logo Express"
               />
               <BoxIcon
+                key="icon-8"
                 alt="logo Node.Js"
                 src={Nodejs}
                 text="Node.Js"
                 title="logo Node.Js"
               />
               <BoxIcon
+                key="icon-9"
                 alt="logo Socket.io"
                 src={socket}
                 text="Socket.IO"
                 title="logo Socket.io"
               />
               <BoxIcon
+                key="icon-10"
                 alt="logo TypeScript"
                 src={typescript}
                 text="TypeScript"
                 title="logo TypeScript"
               />
               <BoxIcon
+                key="icon-11"
                 alt="logo Python"
                 src={python}
                 text="Python"
                 title="logo Python"
               />
               <BoxIcon
+                key="icon-12"
                 alt="logo Mysql"
                 src={mysql}
                 text="Mysql"
                 title="logo Mysql"
               />
               <BoxIcon
+                key="icon-13"
                 alt="logo JavaScript"
                 src={mongo}
                 text="MongoDB"
                 title="logo JavaScript"
               />
               <BoxIcon
+                key="icon-14"
                 alt="logo GitHub"
                 src={github}
                 text="GitHub"
                 title="logo GitHub"
               />
-              <BoxIcon alt="logo Git" src={git} text="Git" title="logo Git" />
               <BoxIcon
+                key="icon-15"
+                alt="logo Next.JS"
+                src={nextjs}
+                text="Next.js"
+                title="logo Next.js"
+              />
+              <BoxIcon
+                key="icon-16"
+                alt="logo Graphql"
+                src={graphql}
+                text="GraphQL"
+                title="logo GraphQL"
+              />
+              <BoxIcon
+                key="icon-17"
+                alt="logo Git"
+                src={git}
+                text="Git"
+                title="logo Git"
+              />
+              <BoxIcon
+                key="icon-18"
                 alt="logo FireBase"
                 src={firebase}
                 text="FireBase"
                 title="logo FireBase"
               />
               <BoxIcon
+                key="icon-19"
                 alt="logo Figma"
                 src={figma}
                 text="Figma"
                 title="logo Figma"
               />
-              <BoxIcon alt="logo AWS" src={aws} text="AWS" title="logo AWS" />
+              <BoxIcon
+                key="icon-"
+                alt="logo AWS"
+                src={aws}
+                text="AWS"
+                title="logo AWS"
+              />
             </ContainerSkills>
           </SectionSkills>
           <SectionProjects theme={getBackground}>
             <h2 className="projects">Projects</h2>
             <ContainerProjects className="js-animate-all">
               <BoxProject
+                key="1"
                 urlProject="https://mariahstore.online/"
                 alt="imagem site marihStore"
                 nameProject="E-commerce MariahStore"
@@ -415,6 +460,7 @@ const App: React.FC = () => {
                 urlTechUsed={[reactImage, StyledComp, Express, mongo, Nodejs]}
               />
               <BoxProject
+                key="2"
                 urlProject="https://sportnetnew.com/"
                 alt="imagem site Sportnet"
                 nameProject="Site de Notícias"
@@ -423,6 +469,7 @@ const App: React.FC = () => {
                 urlTechUsed={[reactImage, StyledComp, Nodejs]}
               />
               <BoxProject
+                key="3"
                 urlProject="https://palpites-futebol.netlify.app/"
                 alt="imagem site Palites de Futebol"
                 nameProject="Palpites de Futebol"
@@ -431,6 +478,7 @@ const App: React.FC = () => {
                 urlTechUsed={[reactImage, StyledComp, Express, mongo, Nodejs]}
               />
               <BoxProject
+                key="4"
                 urlProject="https://chatmenetwork.netlify.com"
                 alt="imagem rede Social ChatMe"
                 nameProject="Rede Social ChatMe"
@@ -446,6 +494,7 @@ const App: React.FC = () => {
                 ]}
               />
               <BoxProject
+                key="5"
                 urlProject="https://tictactoe-25969.web.app/"
                 alt="Projeto ticTacToe"
                 nameProject="Game Tic Tac Toe"
@@ -461,6 +510,7 @@ const App: React.FC = () => {
               />
 
               <BoxProject
+                key="6"
                 urlProject="https://lfanimesflix.netlify.app/"
                 alt="Projeto LF animesFlix"
                 nameProject="LF AnimesFlix"

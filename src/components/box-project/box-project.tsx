@@ -23,7 +23,7 @@ const BoxProject: React.FC<ParamsProject> = ({
       <h4>{nameProject}</h4>
       <BoxInfos>
         {urlTechUsed.map((values) => (
-          <img src={values} alt={alt} title={title} />
+          <img src={values} alt={alt} title={title} key={Math.random()} />
         ))}
       </BoxInfos>
       <div className="button-visit">
